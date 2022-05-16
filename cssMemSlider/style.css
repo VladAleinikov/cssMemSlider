@@ -1,0 +1,124 @@
+*{
+      padding: 0;
+      margin: 0;
+      
+}
+
+body{
+      width: 80%;
+      height: 100vh;
+      margin: auto;
+display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(72, 72, 72);
+}
+
+.memeSlider{
+      width: 100%;
+      height: 90%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 10fr 1fr;
+      grid-template-areas: "meme meme";
+      justify-content: space-between;
+      align-content: space-around;
+
+}
+.memeSlider div{
+      display: flex;
+      flex-direction: row;
+}
+
+.memes{
+      position: relative;
+      width: 80%;
+      height: 100%;
+      margin: auto;
+      grid-area: meme;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      
+
+}
+.img{
+      position: relative;
+      min-width: 100%;
+      height: auto;
+      left: 0px;
+      border-radius: 10px;
+
+      transition: .4s;
+}
+img{
+      width: 100%;
+      object-fit: contain;
+}
+.signatures{
+      margin-left: 30%;
+      width: 50%;
+      height: 100%;
+      align-items: center;
+
+      flex-wrap: nowrap;
+      overflow: hidden;
+}
+
+.signature{
+      position: relative;
+      min-width: 100%;
+      left: 0px;
+      font-size: 1.3em;
+      font-weight: 600;
+      color:aliceblue;
+      transition: .4s;
+      
+}
+
+
+.controls{
+
+      align-items: center;
+      justify-content: center;
+}
+.button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 5px;
+}
+.btn{
+      width: 30%;
+      height: 30%;
+      
+
+      border-radius: 100%;
+      border: solid 2px rgb(122, 122, 224);
+      transition: .4s;
+
+
+}
+
+.button:hover .btn{
+      background: rgb(194, 194, 255);
+      border: solid 2px rgb(194, 194, 255);
+}
+.button:active .bt{
+      background: #fff;
+      border: solid 2px #fff;
+}
+.button.active .btn{
+      background: rgb(194, 194, 255);
+      border: solid 2px rgb(255, 255, 255);
+}
+
+@media (max-width: 425px) {
+      .memeSlider{
+            grid-template-columns: 1fr;
+            grid-template-rows: 3fr 1fr 1fr;
+            grid-template-areas: "meme";  
+      }
+}
